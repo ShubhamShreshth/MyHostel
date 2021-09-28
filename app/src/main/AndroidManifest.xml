@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.myhostel">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyHostel">
+        <activity
+            android:name=".ProfileAdmin"
+            android:exported="true"
+            android:theme="@style/Theme.MyHostel.NoActionBar"/>
+        <activity
+            android:name=".MainActivityAdmin"
+            android:exported="true"
+            android:theme="@style/Theme.MyHostel.NoActionBar"/>
+        <activity
+            android:name=".bugs"
+            android:exported="true"
+            android:theme="@style/Theme.MyHostel.NoActionBar" />
+        <activity
+            android:name=".wifi"
+            android:exported="true"
+            android:theme="@style/Theme.MyHostel.NoActionBar" />
+        <activity
+            android:name=".wash_rooms"
+            android:exported="true"
+            android:theme="@style/Theme.MyHostel.NoActionBar" />
+        <activity
+            android:name=".laundry"
+            android:exported="true"
+            android:theme="@style/Theme.MyHostel.NoActionBar" />
+        <activity
+            android:name=".Extra"
+            android:exported="true"
+            android:theme="@style/Theme.MyHostel.NoActionBar" />
+        <activity
+            android:name=".Food"
+            android:exported="true"
+            android:theme="@style/Theme.MyHostel.NoActionBar" />
+        <activity
+            android:name=".Profile"
+            android:exported="true"
+            android:theme="@style/Theme.MyHostel.NoActionBar" />
+        <activity
+            android:name=".myroom"
+            android:exported="true"
+            android:theme="@style/Theme.MyHostel.NoActionBar" />
+        <activity
+            android:name=".Complaint_cat"
+            android:exported="true"
+            android:theme="@style/Theme.MyHostel.NoActionBar" />
+        <activity
+            android:name=".AdminRegister"
+            android:exported="true"
+            android:theme="@style/Theme.MyHostel.NoActionBar" />
+        <activity
+            android:name=".UserRegister"
+            android:exported="true"
+            android:theme="@style/Theme.MyHostel.NoActionBar" />
+        <activity
+            android:name=".AdminLogin"
+            android:exported="true"
+            android:theme="@style/Theme.MyHostel.NoActionBar" />
+        <activity
+            android:name=".UserLogin"
+            android:exported="true"
+            android:theme="@style/Theme.MyHostel.NoActionBar" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyHostel.NoActionBar" />
+        <activity
+            android:name=".Splash"
+            android:exported="true"
+            android:theme="@style/Theme.MyHostel.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

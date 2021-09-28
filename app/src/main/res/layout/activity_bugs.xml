@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    tools:context=".bugs">
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp">
+
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:fontFamily="@font/ubuntu"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:text="COMPLAINT CATEGORY : "
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:background="@drawable/shape"
+                tools:layout_editor_absoluteX="59dp"
+                tools:layout_editor_absoluteY="393dp" />
+
+            <TextView
+                android:id="@+id/cat_output"
+                android:layout_width="195dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:fontFamily="@font/ubuntu"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:text="BUGS"
+                android:background="@drawable/shape"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                tools:layout_editor_absoluteX="97dp"
+                tools:layout_editor_absoluteY="202dp" />
+
+
+
+        </TableRow>
+
+
+    </TableLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:id="@+id/input_box"
+        android:layout_width="315dp"
+        android:layout_height="211dp"
+        android:layout_marginLeft="40dp"
+        android:hint="Describe your complaint here..."
+        android:paddingLeft="18dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputDetailbugs"
+            android:layout_width="313dp"
+            android:layout_height="217dp"
+            android:layout_marginLeft="-16dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/sendbugs"
+        android:layout_width="wrap_content"
+        android:layout_height="81dp"
+        android:layout_marginLeft="310dp"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        app:srcCompat="@android:drawable/ic_menu_send" />
+
+
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/</item>
+        <item>@font/advent_pro_light</item>
+        <item>@font/alegreya_sans_light</item>
+        <item>@font/architects_daughter</item>
+        <item>@font/comfortaa</item>
+        <item>@font/montserrat</item>
+        <item>@font/open_sans</item>
+        <item>@font/roboto</item>
+        <item>@font/ubuntu</item>
+        <item>@font/ubuntu_light</item>
+    </array>
+</resources>
