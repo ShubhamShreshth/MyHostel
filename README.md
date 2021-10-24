@@ -10,14 +10,22 @@ A lot of students face problem due to the unresolved hostel issues. Issues like 
 
 MyHostel App solves above listed problems by allowing hostelites to file complaint against service in the hostel with a description explaining the same and post it on the app. The wardens / hostel authorities will recieve these complaints along with the student name, room number, etc. which makes it easy for the warden / hostel authorities to have an overview of what services to be looked into.
 
-### Features of the application :
+### Features of the application : Student View -
 
 - _Register_ using your name, email, room number, building number, roll number, branch, password.
 - _Login_ using your email, password.
-- _File a complaint_ along with description and photo associated with it.
-- View your _feed_, where important notice will be displayed.
+- _File a complaint_ amongst the various categories listed along with description and photo associated with it.
 - Check the _status_ of your complaint.
 - _Get notified_ when your complaint is approved or denied.
+- _View_ your _profile_.
+
+### Features of the application : Admin View -
+
+- _Register_ using your name, email, building number, password.
+- _Login_ using your email, password.
+- _View complaints_ along with their description and photo associated with it.
+- _Approv or Reject_ a complaint with reason.
+- _Update the status_ once the problem is resolved.
 - _View_ your _profile_.
 
 ### Concepts used :
