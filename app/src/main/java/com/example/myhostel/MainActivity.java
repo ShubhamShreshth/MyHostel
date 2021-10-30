@@ -1,5 +1,6 @@
 package com.example.myhostel;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,6 +12,11 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
@@ -22,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     Button mbookcomplaint;
     ImageButton mprofilebutton;
     FirebaseAuth fAuth;
-    FirebaseFirestore fStore;
+    FirebaseDatabase fData;
     String userid;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,14 +39,20 @@ public class MainActivity extends AppCompatActivity {
         mprofilebutton=findViewById(R.id.profileButton);
 
         fAuth = FirebaseAuth.getInstance();
-        fStore = FirebaseFirestore.getInstance();
+        fData = FirebaseDatabase.getInstance();
 
         userid = fAuth.getCurrentUser().getUid();
-        DocumentReference documentReference = fStore.collection("Users").document(userid);
-        documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
+        DatabaseReference databaseReference = fData.getReference("Users").child(fAuth.getCurrentUser().getUid()).child("Name");
+        databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
-            public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-                mName.setText(value.getString("Name"));
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                String array = (String) snapshot.getValue();
+                mName.setText(array);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
             }
         });
         mbookcomplaint.setOnClickListener(new View.OnClickListener() {
