@@ -62,9 +62,9 @@
 
     <Button
         android:id="@+id/adminSignIn"
-        android:layout_width="97dp"
-        android:layout_height="45dp"
-        android:background="@drawable/login_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_200"
         android:fontFamily="@font/ubuntu_light"
         android:text="Sign In"
         android:textAllCaps="false"

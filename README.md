@@ -42,3 +42,4 @@ MyHostel App solves above listed problems by allowing hostelites to file complai
 - Update _app>src>main>res>font_ folder. This folder contains the external fonts used.
 - Update _res>values>colors.xml_ file. This folder contains the external colors used.
 - Update _res>values>strings.xml_ file. This folder contains the external strings used.
+- Update _res>values>strings.xml_ file. This folder contains the external strings used.

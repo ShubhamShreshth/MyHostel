@@ -31,7 +31,7 @@
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/ProfilepageIDadmin"
-        app:layout_constraintEnd_toStartOf="@+id/ProfilepageIDadmin"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.10"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/ProfilepageIDadmin" />
@@ -47,8 +47,8 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.50"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toEndOf="@+id/profileIDtextadmin"
         app:layout_constraintTop_toBottomOf="@+id/text2"
         app:layout_constraintVertical_bias="0.050000012" />
 
@@ -61,7 +61,7 @@
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/ProfilepageNameadmin"
-        app:layout_constraintEnd_toStartOf="@+id/ProfilepageNameadmin"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/ProfilepageNameadmin"
@@ -78,8 +78,8 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.50"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toEndOf="@+id/profileNametextadmin"
         app:layout_constraintTop_toBottomOf="@+id/ProfilepageIDadmin"
         app:layout_constraintVertical_bias="0.050000012" />
 
@@ -92,7 +92,7 @@
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/ProfilepageEmailadmin"
-        app:layout_constraintEnd_toStartOf="@+id/ProfilepageEmailadmin"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/ProfilepageEmailadmin" />
@@ -108,46 +108,17 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toEndOf="@+id/profileEmailtextadmin"
         app:layout_constraintTop_toBottomOf="@+id/ProfilepageNameadmin"
         app:layout_constraintVertical_bias="0.050000012" />
 
-
-    <TextView
-        android:id="@+id/profileBuildtextadmin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/ubuntu_light"
-        android:text="Building Number : "
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/ProfilepageBuildadmin"
-        app:layout_constraintEnd_toStartOf="@+id/ProfilepageBuildadmin"
-        app:layout_constraintHorizontal_bias="0.1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/ProfilepageBuildadmin" />
-
-    <TextView
-        android:id="@+id/ProfilepageBuildadmin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/ubuntu_light"
-        android:text="Building Number"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ProfilepageEmailadmin"
-        app:layout_constraintVertical_bias="0.050000012" />
 
     <Button
         android:id="@+id/Logout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/purple_200"
         android:fontFamily="@font/ubuntu_light"
         android:onClick="Logout"
         android:text="Logout"
@@ -157,8 +128,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ProfilepageBuildadmin"
-        app:layout_constraintVertical_bias="0.060000002"/>
+        app:layout_constraintTop_toBottomOf="@+id/profileEmailtextadmin"
+        app:layout_constraintVertical_bias="0.060000002" />
 
 
 
