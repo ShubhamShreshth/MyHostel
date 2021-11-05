@@ -20,9 +20,15 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -32,33 +38,49 @@ public class Food extends AppCompatActivity {
     EditText inputBox;
     FloatingActionButton btn;
     FirebaseAuth fAuth;
-    FirebaseFirestore fStore;
+    FirebaseDatabase fData;
     String userid;
+    ArrayList<String> selection = new ArrayList<String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food);
-        inputBox= findViewById(R.id.inputDetailbugs);
-        btn = findViewById(R.id.sendbugs);
+        inputBox= findViewById(R.id.inputDetailfood);
+        btn = findViewById(R.id.sendfood);
 
         fAuth = FirebaseAuth.getInstance();
-        fStore = FirebaseFirestore.getInstance();
+        fData = FirebaseDatabase.getInstance();
+
+        userid = fAuth.getCurrentUser().getUid();
+        String category = "Food";
+
+        DatabaseReference ref = fData.getReference("Users").child(userid).child("Complaint").child(category);
+        ref.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                    String data = dataSnapshot.getValue(String.class);
+                    selection.add(data);
+                }
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+            }
+        });
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String complaint = inputBox.getText().toString().trim();
-                String category = "Food";
                 if (TextUtils.isEmpty(complaint)) {
                     inputBox.setError("No complaint entered");
                     return;
                 }
-                userid = fAuth.getCurrentUser().getUid();
-                DocumentReference documentReference = fStore.collection("Users").document(userid);
-                documentReference.update("Complaint",complaint);
-                documentReference.update("Complaint Category",category);
-                startActivity(new Intent(getApplicationContext(),Food.class));
+                selection.add(complaint);
+                DatabaseReference databaseReference = fData.getReference("Users").child(userid).child("Complaint");
+                databaseReference.child(category).setValue(selection);
+                startActivity(new Intent(getApplicationContext(),Complaint_cat.class));
                 finish();
             }
         });

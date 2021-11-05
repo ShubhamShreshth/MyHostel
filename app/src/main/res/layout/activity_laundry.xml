@@ -64,14 +64,14 @@
         android:paddingLeft="18dp">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/inputDetailbugs"
+            android:id="@+id/inputDetaillaundry"
             android:layout_width="313dp"
             android:layout_height="217dp"
             android:layout_marginLeft="-16dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/sendbugs"
+        android:id="@+id/sendlaundry"
         android:layout_width="wrap_content"
         android:layout_height="81dp"
         android:layout_marginLeft="310dp"

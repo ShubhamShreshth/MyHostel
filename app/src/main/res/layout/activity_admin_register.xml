@@ -101,7 +101,7 @@
         android:id="@+id/adminSignUp"
         android:layout_width="97dp"
         android:layout_height="45dp"
-        android:background="@color/white"
+        android:background="@color/purple_200"
         android:fontFamily="@font/ubuntu_light"
         android:text="Sign Up"
         android:textAllCaps="false"

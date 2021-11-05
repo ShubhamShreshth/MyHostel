@@ -25,6 +25,7 @@
         android:id="@+id/bookCompliant"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/purple_200"
         android:fontFamily="@font/ubuntu_light"
         android:text="Book a Complaint"
         android:textAllCaps="false"
@@ -41,6 +42,7 @@
         android:id="@+id/Logout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/purple_200"
         android:fontFamily="@font/ubuntu_light"
         android:onClick="Logout"
         android:text="Logout"
@@ -51,7 +53,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bookCompliant"
-        app:layout_constraintVertical_bias="0.060000002"/>
+        app:layout_constraintVertical_bias="0.060000002" />
 
     <ImageButton
         android:id="@+id/profileButton"
