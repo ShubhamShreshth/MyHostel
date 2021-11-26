@@ -4,11 +4,11 @@
 
 ### Problem Statement :
 
-A lot of students face problem due to the unresolved hostel issues. Issues like unhygenic food, safety, laundry etc are very common in hostels in India. A physical call to the respective authorities is required to solve the issue which can lead to ambiguity.
+A lot of students face problem due to the unresolved hostel issues. Issues like unhygienic food, safety, laundry etc are very common in hostels in India. A physical call to the respective authorities is required to solve the issue which can lead to ambiguity.
 
 ### Problems MyHostel solves : 
 
-MyHostel App solves above listed problems by allowing hostelites to file complaint against service in the hostel with a description explaining the same and post it on the app. The wardens / hostel authorities will recieve these complaints along with the student name, room number, etc. which makes it easy for the warden / hostel authorities to have an overview of what services to be looked into.
+MyHostel App solves above listed problems by allowing hostelites to file complaint against service in the hostel with a description explaining the same and post it on the app. The wardens / hostel authorities will receive these complaints along with the student name, room number, etc. which makes it easy for the warden / hostel authorities to have an overview of what services to be looked into.
 
 ### Features of the application : Student View -
 
